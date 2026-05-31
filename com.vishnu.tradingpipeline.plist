@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.vishnu.tradingpipeline</string>
+
+    <key>ProgramArguments</key>
+    <array>
+        <string>/bin/bash</string>
+        <string>/Users/anvi/Documents/Claude/Projects/Trade app/trading_toolkit/run_loop.sh</string>
+    </array>
+
+    <key>WorkingDirectory</key>
+    <string>/Users/anvi/Documents/Claude/Projects/Trade app/trading_toolkit</string>
+
+    <!-- start at login and keep it running (restart on crash / clean exit) -->
+    <key>RunAtLoad</key>
+    <true/>
+    <key>KeepAlive</key>
+    <true/>
+
+    <!-- throttle restarts so a crash-loop can't hammer the CPU -->
+    <key>ThrottleInterval</key>
+    <integer>30</integer>
+
+    <key>StandardOutPath</key>
+    <string>/Users/anvi/Documents/Claude/Projects/Trade app/trading_toolkit/pipeline.out.log</string>
+    <key>StandardErrorPath</key>
+    <string>/Users/anvi/Documents/Claude/Projects/Trade app/trading_toolkit/pipeline.err.log</string>
+</dict>
+</plist>

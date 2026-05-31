@@ -1,0 +1,15 @@
+# Secrets — NEVER commit these
+local_settings.py
+token_cache.json
+.env
+
+# Logs
+*.log
+pipeline.out.log
+pipeline.err.log
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/

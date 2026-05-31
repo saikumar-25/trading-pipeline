@@ -1,0 +1,56 @@
+name: trading-pipeline
+
+# Runs the multi-agent scan on a schedule from GitHub's servers (free).
+# Cron is UTC. NSE hours 09:15-15:30 IST = 03:45-10:00 UTC. We run a little
+# wider; the script's own IST market-hours check decides whether to act.
+on:
+  schedule:
+    - cron: "*/5 3-10 * * 1-5"     # every 5 min, Mon-Fri, ~market hours
+  workflow_dispatch: {}            # lets you run it manually from the Actions tab
+
+permissions:
+  contents: write                  # allows committing the paper-state CSVs back
+
+concurrency:
+  group: trading-pipeline
+  cancel-in-progress: false
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements-engine.txt
+
+      # Reuse the Dhan token across runs so we mint via TOTP only ~once/day.
+      - name: Restore token cache
+        uses: actions/cache@v4
+        with:
+          path: token_cache.json
+          key: dhan-token-${{ github.run_id }}-${{ github.run_attempt }}
+          restore-keys: |
+            dhan-token-
+
+      - name: Run one scan
+        env:
+          DHAN_CLIENT_ID: ${{ secrets.DHAN_CLIENT_ID }}
+          DHAN_PIN: ${{ secrets.DHAN_PIN }}
+          DHAN_TOTP_SECRET: ${{ secrets.DHAN_TOTP_SECRET }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python live_pipeline.py once
+
+      - name: Persist paper-trade logs
+        run: |
+          git config user.name "pipeline-bot"
+          git config user.email "pipeline-bot@users.noreply.github.com"
+          git add -f signals_log.csv paper_positions.csv 2>/dev/null || true
+          git commit -m "state update [skip ci]" || echo "no changes to commit"
+          git push || echo "nothing to push"

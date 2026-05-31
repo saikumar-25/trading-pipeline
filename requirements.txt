@@ -1,0 +1,7 @@
+dhanhq
+pyotp
+pandas
+truststore
+certifi
+tabulate
+streamlit

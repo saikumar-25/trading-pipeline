@@ -1,0 +1,7 @@
+# Slim deps for the GitHub Actions engine (no Streamlit -> faster runs)
+dhanhq
+pyotp
+pandas
+truststore
+certifi
+tabulate
