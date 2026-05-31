@@ -9,6 +9,21 @@ import netctx
 from decision import Decision
 
 
+def _rationale(d: Decision) -> str:
+    """A 1-2 line plain-English basis, from the agents that drove the call."""
+    if not d.signals:
+        return ""
+    direction = 1 if "CE" in d.action else -1
+    agree = [s for s in d.signals if s.score * direction > 0.1]
+    agree.sort(key=lambda s: abs(s.score), reverse=True)
+    parts = []
+    for s in agree[:3]:
+        clauses = [c.strip() for c in s.notes.split(";")[:2] if c.strip()]
+        if clauses:
+            parts.append(f"{s.name} ({'; '.join(clauses)})")
+    return "; ".join(parts)
+
+
 def format_message(d: Decision) -> str:
     t = dt.datetime.now().strftime("%H:%M")
     lines = [f"📊 {d.symbol}  ({t})  [{'PAPER' if config.PAPER_MODE else 'LIVE-SIGNAL'}]"]
@@ -31,10 +46,11 @@ def format_message(d: Decision) -> str:
         ]
         if inval:
             lines.append(f"   Thesis valid while {d.symbol} stays {side} {inval}")
-        lines += [
-            f"   Why: {d.reason}",
-            "   ⚠️ You place the order. If price already ran past the max-entry, SKIP it.",
-        ]
+        lines.append(f"   Why: {d.reason}")
+        basis = _rationale(d)
+        if basis:
+            lines.append(f"   📋 Basis: {basis}")
+        lines.append("   ⚠️ You place the order. If price already ran past the max-entry, SKIP it.")
 
     # one-line agent breakdown
     brk = " | ".join(f"{s.name}:{s.score:+.1f}" for s in d.signals)
