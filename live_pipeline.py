@@ -81,10 +81,13 @@ def evaluate(symbol: str, meta: dict):
         _trades_today[symbol] = _trades_today.get(symbol, 0) + 1
 
     # paper logging: score existing open positions, then record this decision
+    # (we log EVERY decision so the dashboard/scorecard stays complete)
     paper_log.mark_to_market(symbol, chain)
     paper_log.record(d)
 
-    notifier.send(notifier.format_message(d))
+    # Telegram only on an actionable trade — no "NO TRADE" spam.
+    if d.action != "NO TRADE":
+        notifier.send(notifier.format_message(d))
     return d
 
 
