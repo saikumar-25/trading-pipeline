@@ -66,10 +66,43 @@ OTHER_CHARGES_BPS = 3.0       # exchange txn + gst + sebi + stamp, rough
 TELEGRAM_BOT_TOKEN = _secret("TELEGRAM_BOT_TOKEN")
 TELEGRAM_CHAT_ID = _secret("TELEGRAM_CHAT_ID")
 
-# --- F&O universe to watch (index options) ---
+# --- F&O universe to watch ---
+# instrument_type: "INDEX" or "EQUITY". strike_step is auto-detected from the
+# live chain; the value here is only a fallback. Lot sizes from Dhan scrip master.
+def _idx(sid, lot):
+    return {"under_security_id": sid, "under_exchange_segment": "IDX_I",
+            "lot_size": lot, "instrument_type": "INDEX"}
+
+def _stk(sid, lot):
+    return {"under_security_id": sid, "under_exchange_segment": "NSE_EQ",
+            "lot_size": lot, "instrument_type": "EQUITY"}
+
 FNO_UNDERLYINGS = {
-    "NIFTY":     {"under_security_id": 13, "under_exchange_segment": "IDX_I", "lot_size": 75,  "strike_step": 50},
-    "BANKNIFTY": {"under_security_id": 25, "under_exchange_segment": "IDX_I", "lot_size": 35,  "strike_step": 100},
+    # indices
+    "NIFTY":      _idx(13, 75),
+    "BANKNIFTY":  _idx(25, 35),
+    "SENSEX":     _idx(51, 20),
+    # 20 liquid F&O stocks
+    "RELIANCE":   _stk(2885, 500),
+    "HDFCBANK":   _stk(1333, 650),
+    "ICICIBANK":  _stk(4963, 700),
+    "SBIN":       _stk(3045, 750),
+    "INFY":       _stk(1594, 400),
+    "TCS":        _stk(11536, 175),
+    "AXISBANK":   _stk(5900, 625),
+    "KOTAKBANK":  _stk(1922, 2000),
+    "BAJFINANCE": _stk(317, 750),
+    "LT":         _stk(11483, 175),
+    "ITC":        _stk(1660, 1600),
+    "HINDUNILVR": _stk(1394, 300),
+    "MARUTI":     _stk(10999, 50),
+    "M&M":        _stk(2031, 200),
+    "TATASTEEL":  _stk(3499, 2750),
+    "ADANIENT":   _stk(25, 309),
+    "BHARTIARTL": _stk(10604, 475),
+    "HCLTECH":    _stk(7229, 350),
+    "SUNPHARMA":  _stk(3351, 350),
+    "TITAN":      _stk(3506, 175),
 }
 
 # --- Bar / scan cadence ---

@@ -46,11 +46,14 @@ def _reset_if_new_day(now: dt.datetime):
 
 def evaluate(symbol: str, meta: dict):
     sid, seg = meta["under_security_id"], meta["under_exchange_segment"]
-    step, lot = meta["strike_step"], meta["lot_size"]
+    lot = meta["lot_size"]
+    itype = meta.get("instrument_type", "INDEX")
 
-    df = market.get_intraday_underlying(sid, seg, config.UNDERLYING_TF)
+    df = market.get_intraday_underlying(sid, seg, config.UNDERLYING_TF,
+                                        instrument_type=itype)
     expiries = market.get_expiries(sid, seg)
     chain = market.get_option_chain(sid, seg, expiries[0])
+    step = market.detect_strike_step(chain) or meta.get("strike_step", 50)
 
     sig_oi = oi_chain.analyze(chain, step, symbol)
     signals = [
@@ -94,7 +97,11 @@ def evaluate(symbol: str, meta: dict):
 def run_once():
     now = dt.datetime.now(IST)
     _reset_if_new_day(now)
+    import learning
+    muted = learning.muted_symbols()
     for symbol, meta in config.FNO_UNDERLYINGS.items():
+        if symbol in muted:                      # skip persistent losers
+            continue
         try:
             evaluate(symbol, meta)
         except Exception as e:                   # noqa: BLE001

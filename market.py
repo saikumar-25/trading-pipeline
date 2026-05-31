@@ -67,8 +67,16 @@ def get_option_chain(under_security_id: int, segment: str, expiry: str) -> dict:
     return result
 
 
+def detect_strike_step(chain: dict) -> float | None:
+    """Smallest positive gap between adjacent strikes = the strike step."""
+    ks = sorted(float(k) for k in (chain.get("oc") or {}).keys())
+    diffs = sorted({round(b - a, 2) for a, b in zip(ks, ks[1:]) if b > a})
+    return diffs[0] if diffs else None
+
+
 def get_intraday_underlying(under_security_id: int, segment: str,
-                            interval: str = "5", days: int = 5) -> pd.DataFrame:
+                            interval: str = "5", days: int = 5,
+                            instrument_type: str = "INDEX") -> pd.DataFrame:
     to_date = dt.date.today()
     from_date = to_date - dt.timedelta(days=days)
 
@@ -76,7 +84,7 @@ def get_intraday_underlying(under_security_id: int, segment: str,
         r = c.intraday_minute_data(
             security_id=str(under_security_id),
             exchange_segment=segment,
-            instrument_type="INDEX",
+            instrument_type=instrument_type,
             from_date=str(from_date),
             to_date=str(to_date),
             interval=int(interval),
