@@ -65,8 +65,27 @@ else:
     elif n >= 30 and pnl > 0:
         st.success("Positive expectancy over a meaningful sample.")
 
-# ---- latest signals ----
-st.subheader("Latest signals")
+# ---- per-call results (what happened if you'd taken each call) ----
+st.subheader("Calls & results")
+if positions.empty:
+    st.info("No calls generated yet. Each BUY call and its outcome will appear here.")
+else:
+    cols = [c for c in ["open_time", "symbol", "action", "strike", "type", "expiry",
+                        "entry", "stop", "target", "status", "exit_price", "pnl_rs",
+                        "reason"] if c in positions.columns]
+    res = positions[cols].iloc[::-1]
+
+    def _color_status(row):
+        s = str(row.get("status", ""))
+        bg = ("background-color: #1b3a1b" if s == "WIN"
+              else "background-color: #3a1b1b" if s == "LOSS" else "")
+        return [bg for _ in row]
+    st.dataframe(res.style.apply(_color_status, axis=1), use_container_width=True)
+    st.caption("WIN/LOSS = paper outcome at next-bar fill. 'pending'/'open' = still live. "
+               "Entry is the realistic next-bar fill, not the signal price.")
+
+# ---- latest signals (all decisions, incl. NO TRADE) ----
+st.subheader("All decisions (incl. NO TRADE)")
 if signals.empty:
     st.info("No signals logged yet.")
 else:

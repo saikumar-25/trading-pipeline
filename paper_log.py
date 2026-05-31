@@ -23,12 +23,23 @@ SIGNALS_CSV = os.path.join(DIR, "signals_log.csv")
 POSITIONS_CSV = os.path.join(DIR, "paper_positions.csv")
 
 SIG_COLS = ["time", "symbol", "action", "score", "confidence", "agreeing", "reason"]
-POS_COLS = ["id", "open_time", "symbol", "action", "strike", "type", "security_id",
-            "entry", "stop", "target", "lots", "qty", "status",
-            "exit_time", "exit_price", "pnl_rs"]
+POS_COLS = ["id", "open_time", "symbol", "action", "strike", "type", "expiry",
+            "security_id", "entry", "stop", "target", "lots", "qty", "status",
+            "exit_time", "exit_price", "pnl_rs", "reason"]
 
 
 def _append(path, cols, row):
+    # migrate the file's header if columns changed (keeps old rows intact)
+    if os.path.exists(path):
+        with open(path, newline="") as f:
+            rd = csv.DictReader(f)
+            header, rows = rd.fieldnames, list(rd)
+        if header != cols:
+            with open(path, "w", newline="") as f:
+                w = csv.DictWriter(f, fieldnames=cols)
+                w.writeheader()
+                for r in rows:
+                    w.writerow({k: r.get(k, "") for k in cols})
     new = not os.path.exists(path)
     with open(path, "a", newline="") as f:
         w = csv.DictWriter(f, fieldnames=cols)
@@ -66,10 +77,10 @@ def record(d: Decision):
         _append(POSITIONS_CSV, POS_COLS, {
             "id": f"{d.symbol}-{now}", "open_time": now, "symbol": d.symbol,
             "action": d.action, "strike": c["strike"], "type": c["type"],
-            "security_id": c["security_id"], "entry": c["entry"],
-            "stop": c["stop"], "target": c["target"], "lots": c["lots"],
-            "qty": c["qty"], "status": "pending", "exit_time": "",
-            "exit_price": "", "pnl_rs": ""})
+            "expiry": c.get("expiry", ""), "security_id": c["security_id"],
+            "entry": c["entry"], "stop": c["stop"], "target": c["target"],
+            "lots": c["lots"], "qty": c["qty"], "status": "pending",
+            "exit_time": "", "exit_price": "", "pnl_rs": "", "reason": d.reason})
 
 
 def _chain_ltp_map(chain: dict) -> dict:
