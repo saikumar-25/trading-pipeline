@@ -52,7 +52,7 @@ def evaluate(symbol: str, meta: dict):
     expiries = market.get_expiries(sid, seg)
     chain = market.get_option_chain(sid, seg, expiries[0])
 
-    sig_oi = oi_chain.analyze(chain, step)
+    sig_oi = oi_chain.analyze(chain, step, symbol)
     signals = [
         technical.analyze(df),
         support_resistance.analyze(df),

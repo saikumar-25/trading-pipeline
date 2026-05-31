@@ -3,6 +3,9 @@ local_settings.py
 token_cache.json
 .env
 
+# local test artifact (cloud commits its own copy via git add -f)
+oi_history.json
+
 # Logs
 *.log
 pipeline.out.log

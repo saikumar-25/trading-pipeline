@@ -20,8 +20,12 @@ import urllib.request
 import config
 import netctx
 
+import time
+
 CACHE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "token_cache.json")
 REFRESH_BEFORE_MIN = 30          # refresh when <30 min validity remains
+_MIN_MINT_GAP_S = 120            # never mint more than once per 2 min (anti-storm)
+_last_mint = 0.0
 
 
 def _secret() -> str | None:
@@ -77,16 +81,31 @@ def get_valid_token() -> str:
     if token and not _expiring_soon(expiry):
         return token
 
-    if _secret() and _pin():
-        try:
-            token, expiry = _generate_via_totp()
-            _save_cache(token, expiry)
-            print(f"[token] refreshed via TOTP, valid until {expiry}")
-            return token
-        except Exception as e:      # noqa: BLE001
-            print(f"[token] TOTP refresh failed ({e}); using static config token")
+    return _mint() or config.DHAN_ACCESS_TOKEN
 
-    return config.DHAN_ACCESS_TOKEN
+
+def _mint() -> str | None:
+    """Mint a fresh token via TOTP, throttled to avoid mint storms."""
+    global _last_mint
+    if not (_secret() and _pin()):
+        return None
+    if time.time() - _last_mint < _MIN_MINT_GAP_S:
+        return _load_cache()[0]
+    try:
+        token, expiry = _generate_via_totp()
+        _save_cache(token, expiry)
+        _last_mint = time.time()
+        print(f"[token] refreshed via TOTP, valid until {expiry}")
+        return token
+    except Exception as e:          # noqa: BLE001
+        print(f"[token] TOTP refresh failed ({e})")
+        return None
+
+
+def force_refresh() -> str | None:
+    """Force a re-mint (used when an API call fails with a bad/expired token,
+    which the cached expiry can't detect)."""
+    return _mint() or config.DHAN_ACCESS_TOKEN
 
 
 if __name__ == "__main__":
