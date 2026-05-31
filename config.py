@@ -85,6 +85,7 @@ MIN_CONFIDENCE = 0.55          # aggregate confidence floor (0..1)
 MIN_AGREEING_AGENTS = 3        # this many agents must agree on direction
 REWARD_RISK = 1.5             # target = this multiple of risk
 STOP_PREMIUM_PCT = 0.30        # stop-loss at 30% of option premium paid
+MAX_ENTRY_SLIPPAGE_PCT = 0.08  # never pay more than +8% above the signal premium (anti-chase)
 
 # --- Agent weights (how much each voice counts in the blend) ---
 AGENT_WEIGHTS = {

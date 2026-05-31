@@ -101,6 +101,7 @@ def decide(symbol: str, signals: list[AgentSignal], chain: dict,
 
     c.update({"stop": stop, "target": target, "lots": lots,
               "qty": lots * lot_size,
+              "max_entry": round(entry * (1 + config.MAX_ENTRY_SLIPPAGE_PCT), 2),
               "max_loss_rs": round(per_lot_risk * lots, 0),
               "target_gain_rs": round(config.REWARD_RISK * per_lot_risk * lots, 0)})
     d.action = f"BUY {side}"

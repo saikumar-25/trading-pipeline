@@ -15,6 +15,7 @@ import csv
 import os
 import datetime as dt
 
+import config
 from decision import Decision
 
 DIR = os.path.dirname(os.path.abspath(__file__))
@@ -59,12 +60,15 @@ def record(d: Decision):
 
     if d.action != "NO TRADE" and d.contract:
         c = d.contract
+        # status "pending": it fills at the NEXT bar's price (models the real
+        # delay between alert and you actually entering). entry shown is the
+        # signal-time reference; the true fill is set in mark_to_market().
         _append(POSITIONS_CSV, POS_COLS, {
             "id": f"{d.symbol}-{now}", "open_time": now, "symbol": d.symbol,
             "action": d.action, "strike": c["strike"], "type": c["type"],
             "security_id": c["security_id"], "entry": c["entry"],
             "stop": c["stop"], "target": c["target"], "lots": c["lots"],
-            "qty": c["qty"], "status": "open", "exit_time": "",
+            "qty": c["qty"], "status": "pending", "exit_time": "",
             "exit_price": "", "pnl_rs": ""})
 
 
@@ -83,26 +87,41 @@ def mark_to_market(symbol: str, chain: dict):
     if not rows:
         return
     ltp = _chain_ltp_map(chain)
+    now = dt.datetime.now().isoformat(timespec="seconds")
     changed = False
     for r in rows:
-        if r["status"] != "open" or r["symbol"] != symbol:
+        if r["symbol"] != symbol:
             continue
         cur = ltp.get(str(r["security_id"]))
         if not cur:
             continue
-        entry, stop, target, qty = (float(r["entry"]), float(r["stop"]),
-                                    float(r["target"]), float(r["qty"]))
-        status = exit_px = None
-        if cur >= target:
-            status, exit_px = "WIN", cur
-        elif cur <= stop:
-            status, exit_px = "LOSS", cur
-        if status:
-            r["status"] = status
-            r["exit_time"] = dt.datetime.now().isoformat(timespec="seconds")
-            r["exit_price"] = round(exit_px, 2)
-            r["pnl_rs"] = round((exit_px - entry) * qty, 0)
+
+        # 1) fill PENDING entries at this (next) bar's price = realistic lag
+        if r["status"] == "pending":
+            entry = round(cur, 2)
+            stop = round(entry * (1 - config.STOP_PREMIUM_PCT), 2)
+            target = round(entry + config.REWARD_RISK * (entry - stop), 2)
+            r["entry"], r["stop"], r["target"] = entry, stop, target
+            r["open_time"] = now
+            r["status"] = "open"
             changed = True
+            continue        # don't evaluate win/loss on the same bar we filled
+
+        # 2) evaluate OPEN positions for target / stop
+        if r["status"] == "open":
+            entry, stop, target, qty = (float(r["entry"]), float(r["stop"]),
+                                        float(r["target"]), float(r["qty"]))
+            status = exit_px = None
+            if cur >= target:
+                status, exit_px = "WIN", cur
+            elif cur <= stop:
+                status, exit_px = "LOSS", cur
+            if status:
+                r["status"] = status
+                r["exit_time"] = now
+                r["exit_price"] = round(exit_px, 2)
+                r["pnl_rs"] = round((exit_px - entry) * qty, 0)
+                changed = True
     if changed:
         _write_all(POSITIONS_CSV, POS_COLS, rows)
 

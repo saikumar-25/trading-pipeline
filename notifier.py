@@ -19,17 +19,22 @@ def format_message(d: Decision) -> str:
     else:
         c = d.contract
         arrow = "🟢" if "CE" in d.action else "🔴"
+        side = "above" if "CE" in d.action else "below"
+        inval = d.levels.get("invalidation")
         lines += [
             f"{arrow} {d.action}  {d.symbol} {c['strike']:.0f} {c['type']}",
-            f"   Entry ~{c['entry']}  Stop {c['stop']}  Target {c['target']}",
+            f"   Signal premium ~{c['entry']} (as of {t} bar)",
+            f"   ➡️ Enter ONLY if premium ≤ {c.get('max_entry', c['entry'])}  (don't chase)",
+            f"   Stop {c['stop']}  Target {c['target']}",
             f"   Size {c['lots']} lot(s) = {c['qty']} qty",
             f"   Max loss ≈ Rs{c['max_loss_rs']:.0f} | Target gain ≈ Rs{c['target_gain_rs']:.0f}",
-            f"   Why: {d.reason}",
         ]
-        inval = d.levels.get("invalidation")
         if inval:
-            lines.append(f"   Invalidation: underlying {inval}")
-        lines.append("   ⚠️ You place the order. Tool does not auto-trade.")
+            lines.append(f"   Thesis valid while {d.symbol} stays {side} {inval}")
+        lines += [
+            f"   Why: {d.reason}",
+            "   ⚠️ You place the order. If price already ran past the max-entry, SKIP it.",
+        ]
 
     # one-line agent breakdown
     brk = " | ".join(f"{s.name}:{s.score:+.1f}" for s in d.signals)
