@@ -39,8 +39,9 @@ def _load(name: str) -> pd.DataFrame:
 
 
 st.title("📊 Multi-Agent Trading Pipeline")
-st.caption("Paper-mode research signals. No orders are placed automatically. "
-           "Not investment advice.")
+st.caption("LIVE Dhan market data (real prices, OI, scores). "
+           "‘Paper’ only means outcomes are simulated on real prices — no orders are "
+           "actually placed. Not investment advice.")
 
 signals = _load("signals_log.csv")
 positions = _load("paper_positions.csv")
