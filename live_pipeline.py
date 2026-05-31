@@ -74,6 +74,10 @@ def evaluate(symbol: str, meta: dict):
     d = decide(symbol, signals, chain, lot, step, levels,
                _trades_today.get(symbol, 0))
 
+    # attach the expiry we evaluated so the alert tells you exactly which contract
+    if d.contract:
+        d.contract["expiry"] = expiries[0]
+
     # set invalidation level based on chosen side
     if d.action.endswith("CE"):
         d.levels["invalidation"] = levels["support"]

@@ -22,7 +22,7 @@ def format_message(d: Decision) -> str:
         side = "above" if "CE" in d.action else "below"
         inval = d.levels.get("invalidation")
         lines += [
-            f"{arrow} {d.action}  {d.symbol} {c['strike']:.0f} {c['type']}",
+            f"{arrow} {d.action}  {d.symbol} {c['strike']:.0f} {c['type']}  exp {c.get('expiry', '?')}",
             f"   Signal premium ~{c['entry']} (as of {t} bar)",
             f"   ➡️ Enter ONLY if premium ≤ {c.get('max_entry', c['entry'])}  (don't chase)",
             f"   Stop {c['stop']}  Target {c['target']}",
