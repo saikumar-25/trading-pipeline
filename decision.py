@@ -31,8 +31,11 @@ def _blend(signals: list[AgentSignal]) -> tuple[float, float, int]:
         wt = w.get(s.name, 0.5)
         num += wt * s.score * s.confidence
         den += wt * s.confidence
-        cnum += wt * s.confidence
-        cden += wt
+        # confidence is weighted by conviction (|score|) so agents with NO view
+        # (fundamentals on an index, a neutral sentiment) don't dilute it.
+        conv = abs(s.score)
+        cnum += wt * s.confidence * conv
+        cden += wt * conv
     combined = num / den if den else 0.0
     confidence = cnum / cden if cden else 0.0
     direction = 1 if combined > 0 else -1
