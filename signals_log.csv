@@ -5,3 +5,21 @@ time,symbol,action,score,confidence,agreeing,reason
 2026-05-31T05:56:13,BANKNIFTY,NO TRADE,-0.39,0.51,2,confidence 0.51 below 0.55
 2026-05-31T07:08:15,NIFTY,NO TRADE,-0.52,0.548,3,confidence 0.55 below 0.55
 2026-05-31T07:08:18,BANKNIFTY,NO TRADE,-0.506,0.52,2,confidence 0.52 below 0.55
+2026-06-02T11:50:59,NIFTY,NO TRADE,0.129,0.633,2,edge +0.13 below threshold 0.3
+2026-06-02T11:51:02,BANKNIFTY,NO TRADE,0.207,0.555,2,edge +0.21 below threshold 0.3
+2026-06-02T11:51:05,SENSEX,NO TRADE,0.305,0.61,3,risk budget Rs500 too small for 1 lot (needs ~Rs3251) — stay flat
+2026-06-02T11:51:09,RELIANCE,NO TRADE,0.004,0.516,1,edge +0.00 below threshold 0.3
+2026-06-02T11:51:12,HDFCBANK,NO TRADE,0.155,0.644,1,edge +0.15 below threshold 0.3
+2026-06-02T11:51:15,ICICIBANK,NO TRADE,-0.524,0.648,3,risk budget Rs500 too small for 1 lot (needs ~Rs4340) — stay flat
+2026-06-02T11:51:19,SBIN,NO TRADE,0.209,0.564,2,edge +0.21 below threshold 0.3
+2026-06-02T11:51:22,INFY,NO TRADE,0.328,0.601,3,risk budget Rs500 too small for 1 lot (needs ~Rs4032) — stay flat
+2026-06-02T11:51:25,TCS,NO TRADE,0.408,0.653,3,risk budget Rs500 too small for 1 lot (needs ~Rs3943) — stay flat
+2026-06-02T11:51:29,AXISBANK,NO TRADE,-0.37,0.59,3,risk budget Rs500 too small for 1 lot (needs ~Rs4462) — stay flat
+2026-06-02T11:51:37,MARUTI,NO TRADE,0.009,0.528,2,edge +0.01 below threshold 0.3
+2026-06-02T11:51:40,M&M,NO TRADE,0.517,0.608,3,risk budget Rs500 too small for 1 lot (needs ~Rs6478) — stay flat
+2026-06-02T11:51:44,TATASTEEL,NO TRADE,-0.213,0.683,2,edge -0.21 below threshold 0.3
+2026-06-02T11:51:47,ADANIENT,NO TRADE,0.461,0.6,3,risk budget Rs500 too small for 1 lot (needs ~Rs11362) — stay flat
+2026-06-02T11:51:51,BHARTIARTL,NO TRADE,0.056,0.61,1,edge +0.06 below threshold 0.3
+2026-06-02T11:51:54,HCLTECH,NO TRADE,0.292,0.662,2,edge +0.29 below threshold 0.3
+2026-06-02T11:51:57,SUNPHARMA,NO TRADE,-0.13,0.594,3,edge -0.13 below threshold 0.3
+2026-06-02T11:52:01,TITAN,NO TRADE,0.193,0.567,3,edge +0.19 below threshold 0.3
