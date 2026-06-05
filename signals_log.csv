@@ -81,3 +81,21 @@ time,symbol,action,score,confidence,agreeing,reason
 2026-06-04T13:53:11,TATASTEEL,NO TRADE,-0.124,0.672,2,edge -0.12 below threshold 0.3
 2026-06-04T13:53:15,ADANIENT,NO TRADE,0.308,0.494,3,confidence 0.49 below 0.55
 2026-06-04T13:53:18,BHARTIARTL,NO TRADE,-0.251,0.606,3,edge -0.25 below threshold 0.3
+2026-06-05T07:12:51,NIFTY,NO TRADE,-0.375,0.637,2,only 2 agents agree (need 3)
+2026-06-05T07:12:55,BANKNIFTY,NO TRADE,-0.021,0.654,1,edge -0.02 below threshold 0.3
+2026-06-05T07:12:59,SENSEX,NO TRADE,-0.426,0.669,2,only 2 agents agree (need 3)
+2026-06-05T07:13:02,RELIANCE,NO TRADE,0.1,0.628,2,edge +0.10 below threshold 0.3
+2026-06-05T07:13:05,HDFCBANK,NO TRADE,-0.398,0.641,4,risk budget Rs500 too small for 1 lot (needs ~Rs4446) — stay flat
+2026-06-05T07:13:09,ICICIBANK,NO TRADE,0.442,0.646,2,only 2 agents agree (need 3)
+2026-06-05T07:13:12,SBIN,NO TRADE,-0.107,0.644,2,edge -0.11 below threshold 0.3
+2026-06-05T07:13:15,INFY,NO TRADE,-0.499,0.683,3,risk budget Rs500 too small for 1 lot (needs ~Rs4148) — stay flat
+2026-06-05T07:13:19,TCS,NO TRADE,-0.504,0.584,4,risk budget Rs500 too small for 1 lot (needs ~Rs3706) — stay flat
+2026-06-05T07:13:22,AXISBANK,NO TRADE,0.197,0.542,1,edge +0.20 below threshold 0.3
+2026-06-05T07:13:30,MARUTI,NO TRADE,0.341,0.567,2,only 2 agents agree (need 3)
+2026-06-05T07:13:34,M&M,NO TRADE,0.05,0.645,2,edge +0.05 below threshold 0.3
+2026-06-05T07:13:37,TATASTEEL,NO TRADE,-0.241,0.598,2,edge -0.24 below threshold 0.3
+2026-06-05T07:13:40,ADANIENT,NO TRADE,0.013,0.483,2,edge +0.01 below threshold 0.3
+2026-06-05T07:13:44,BHARTIARTL,NO TRADE,-0.61,0.67,4,risk budget Rs500 too small for 1 lot (needs ~Rs4280) — stay flat
+2026-06-05T07:13:47,HCLTECH,NO TRADE,-0.352,0.561,3,risk budget Rs500 too small for 1 lot (needs ~Rs3381) — stay flat
+2026-06-05T07:13:50,SUNPHARMA,NO TRADE,0.406,0.697,3,risk budget Rs500 too small for 1 lot (needs ~Rs3591) — stay flat
+2026-06-05T07:13:54,TITAN,NO TRADE,-0.646,0.708,5,risk budget Rs500 too small for 1 lot (needs ~Rs4883) — stay flat
