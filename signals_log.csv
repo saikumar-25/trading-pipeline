@@ -193,3 +193,23 @@ time,symbol,action,score,confidence,agreeing,reason
 2026-06-09T10:35:50,HCLTECH,NO TRADE,-0.188,0.579,2,edge -0.19 below threshold 0.3
 2026-06-09T10:35:51,SUNPHARMA,NO TRADE,-0.095,0.634,2,edge -0.09 below threshold 0.3
 2026-06-09T10:35:54,TITAN,NO TRADE,-0.527,0.657,3,risk budget Rs500 too small for 1 lot (needs ~Rs3936) — stay flat
+2026-06-09T13:31:51,NIFTY,NO TRADE,0.183,0.695,2,edge +0.18 below threshold 0.3
+2026-06-09T13:31:55,BANKNIFTY,NO TRADE,0.269,0.6,3,edge +0.27 below threshold 0.3
+2026-06-09T13:31:58,SENSEX,NO TRADE,0.389,0.692,4,risk budget Rs500 too small for 1 lot (needs ~Rs2890) — stay flat
+2026-06-09T13:32:01,RELIANCE,NO TRADE,0.241,0.533,2,edge +0.24 below threshold 0.3
+2026-06-09T13:32:05,HDFCBANK,NO TRADE,0.117,0.576,2,edge +0.12 below threshold 0.3
+2026-06-09T13:32:08,ICICIBANK,NO TRADE,0.21,0.591,2,edge +0.21 below threshold 0.3
+2026-06-09T13:32:11,SBIN,NO TRADE,0.3,0.683,2,only 2 agents agree (need 3)
+2026-06-09T13:32:15,INFY,NO TRADE,-0.211,0.582,2,edge -0.21 below threshold 0.3
+2026-06-09T13:32:18,TCS,NO TRADE,-0.064,0.528,3,edge -0.06 below threshold 0.3
+2026-06-09T13:32:22,AXISBANK,NO TRADE,0.144,0.596,3,edge +0.14 below threshold 0.3
+2026-06-09T13:32:26,KOTAKBANK,NO TRADE,0.132,0.528,2,edge +0.13 below threshold 0.3
+2026-06-09T13:32:29,BAJFINANCE,NO TRADE,0.18,0.518,2,edge +0.18 below threshold 0.3
+2026-06-09T13:32:33,LT,NO TRADE,0.485,0.646,2,only 2 agents agree (need 3)
+2026-06-09T13:32:36,ITC,NO TRADE,0.266,0.701,2,edge +0.27 below threshold 0.3
+2026-06-09T13:32:40,HINDUNILVR,NO TRADE,0.109,0.562,3,edge +0.11 below threshold 0.3
+2026-06-09T13:32:43,MARUTI,NO TRADE,0.011,0.533,2,edge +0.01 below threshold 0.3
+2026-06-09T13:32:46,M&M,NO TRADE,-0.004,0.632,2,edge -0.00 below threshold 0.3
+2026-06-09T13:32:50,TATASTEEL,NO TRADE,0.125,0.669,2,edge +0.13 below threshold 0.3
+2026-06-09T13:32:53,ADANIENT,NO TRADE,0.199,0.612,2,edge +0.20 below threshold 0.3
+2026-06-09T13:32:56,BHARTIARTL,NO TRADE,-0.589,0.703,3,risk budget Rs500 too small for 1 lot (needs ~Rs3990) — stay flat
