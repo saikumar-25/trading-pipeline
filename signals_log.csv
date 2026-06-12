@@ -269,3 +269,21 @@ time,symbol,action,score,confidence,agreeing,reason
 2026-06-11T12:19:17,HCLTECH,NO TRADE,-0.142,0.651,3,edge -0.14 below threshold 0.3
 2026-06-11T12:19:20,SUNPHARMA,NO TRADE,-0.083,0.556,3,edge -0.08 below threshold 0.3
 2026-06-11T12:19:24,TITAN,NO TRADE,-0.459,0.687,3,risk budget Rs500 too small for 1 lot (needs ~Rs4266) — stay flat
+2026-06-12T07:26:41,NIFTY,NO TRADE,0.273,0.606,2,edge +0.27 below threshold 0.3
+2026-06-12T07:26:45,BANKNIFTY,NO TRADE,0.242,0.576,2,edge +0.24 below threshold 0.3
+2026-06-12T07:26:48,SENSEX,NO TRADE,0.295,0.615,2,edge +0.30 below threshold 0.3
+2026-06-12T07:26:51,RELIANCE,NO TRADE,0.181,0.542,3,edge +0.18 below threshold 0.3
+2026-06-12T07:26:55,HDFCBANK,NO TRADE,0.083,0.564,2,edge +0.08 below threshold 0.3
+2026-06-12T07:26:58,ICICIBANK,NO TRADE,0.257,0.625,2,edge +0.26 below threshold 0.3
+2026-06-12T07:27:01,SBIN,NO TRADE,0.07,0.615,2,edge +0.07 below threshold 0.3
+2026-06-12T07:27:05,INFY,NO TRADE,-0.193,0.725,1,edge -0.19 below threshold 0.3
+2026-06-12T07:27:08,TCS,NO TRADE,-0.153,0.547,3,edge -0.15 below threshold 0.3
+2026-06-12T07:27:12,AXISBANK,NO TRADE,0.295,0.662,2,edge +0.30 below threshold 0.3
+2026-06-12T07:27:21,MARUTI,NO TRADE,-0.029,0.564,3,edge -0.03 below threshold 0.3
+2026-06-12T07:27:24,M&M,NO TRADE,-0.097,0.55,2,edge -0.10 below threshold 0.3
+2026-06-12T07:27:28,TATASTEEL,NO TRADE,-0.227,0.653,3,edge -0.23 below threshold 0.3
+2026-06-12T07:27:31,ADANIENT,NO TRADE,-0.219,0.532,3,edge -0.22 below threshold 0.3
+2026-06-12T07:27:34,BHARTIARTL,NO TRADE,0.214,0.601,3,edge +0.21 below threshold 0.3
+2026-06-12T07:27:38,HCLTECH,NO TRADE,-0.349,0.561,3,risk budget Rs500 too small for 1 lot (needs ~Rs2573) — stay flat
+2026-06-12T07:27:41,SUNPHARMA,NO TRADE,0.215,0.626,3,edge +0.21 below threshold 0.3
+2026-06-12T07:27:44,TITAN,NO TRADE,0.212,0.59,3,edge +0.21 below threshold 0.3
