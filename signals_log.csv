@@ -323,3 +323,23 @@ time,symbol,action,score,confidence,agreeing,reason
 2026-06-15T09:29:02,HCLTECH,NO TRADE,0.215,0.576,2,edge +0.22 below threshold 0.3
 2026-06-15T09:29:05,SUNPHARMA,NO TRADE,0.301,0.673,2,only 2 agents agree (need 3)
 2026-06-15T09:29:09,TITAN,NO TRADE,0.056,0.588,2,edge +0.06 below threshold 0.3
+2026-06-15T15:29:25,NIFTY,NO TRADE,-0.067,0.579,2,edge -0.07 below threshold 0.3
+2026-06-15T15:29:28,BANKNIFTY,NO TRADE,-0.019,0.669,2,edge -0.02 below threshold 0.3
+2026-06-15T15:29:31,SENSEX,NO TRADE,0.079,0.645,3,edge +0.08 below threshold 0.3
+2026-06-15T15:29:35,RELIANCE,NO TRADE,-0.026,0.674,2,edge -0.03 below threshold 0.3
+2026-06-15T15:29:38,HDFCBANK,NO TRADE,0.044,0.613,3,edge +0.04 below threshold 0.3
+2026-06-15T15:29:41,ICICIBANK,NO TRADE,-0.377,0.635,3,risk budget Rs500 too small for 1 lot (needs ~Rs3486) — stay flat
+2026-06-15T15:29:45,SBIN,NO TRADE,-0.132,0.658,2,edge -0.13 below threshold 0.3
+2026-06-15T15:29:48,INFY,NO TRADE,-0.001,0.644,2,edge -0.00 below threshold 0.3
+2026-06-15T15:29:51,TCS,NO TRADE,-0.36,0.655,4,risk budget Rs500 too small for 1 lot (needs ~Rs2247) — stay flat
+2026-06-15T15:29:55,AXISBANK,NO TRADE,0.362,0.673,3,risk budget Rs500 too small for 1 lot (needs ~Rs3750) — stay flat
+2026-06-15T15:30:01,LT,NO TRADE,-0.101,0.622,2,edge -0.10 below threshold 0.3
+2026-06-15T15:30:05,ITC,NO TRADE,-0.064,0.614,2,edge -0.06 below threshold 0.3
+2026-06-15T15:30:08,HINDUNILVR,NO TRADE,-0.432,0.587,4,risk budget Rs500 too small for 1 lot (needs ~Rs3978) — stay flat
+2026-06-15T15:30:11,MARUTI,NO TRADE,-0.033,0.563,2,edge -0.03 below threshold 0.3
+2026-06-15T15:30:14,M&M,NO TRADE,0.028,0.538,2,edge +0.03 below threshold 0.3
+2026-06-15T15:30:18,TATASTEEL,NO TRADE,-0.445,0.658,3,risk budget Rs500 too small for 1 lot (needs ~Rs3190) — stay flat
+2026-06-15T15:30:21,ADANIENT,NO TRADE,0.003,0.505,2,edge +0.00 below threshold 0.3
+2026-06-15T15:30:24,BHARTIARTL,NO TRADE,-0.24,0.668,4,edge -0.24 below threshold 0.3
+2026-06-15T15:30:28,HCLTECH,NO TRADE,-0.052,0.585,3,edge -0.05 below threshold 0.3
+2026-06-15T15:30:31,SUNPHARMA,NO TRADE,0.021,0.567,2,edge +0.02 below threshold 0.3
