@@ -343,3 +343,23 @@ time,symbol,action,score,confidence,agreeing,reason
 2026-06-15T15:30:24,BHARTIARTL,NO TRADE,-0.24,0.668,4,edge -0.24 below threshold 0.3
 2026-06-15T15:30:28,HCLTECH,NO TRADE,-0.052,0.585,3,edge -0.05 below threshold 0.3
 2026-06-15T15:30:31,SUNPHARMA,NO TRADE,0.021,0.567,2,edge +0.02 below threshold 0.3
+2026-06-16T08:49:36,NIFTY,NO TRADE,0.272,0.584,3,edge +0.27 below threshold 0.3
+2026-06-16T08:49:39,BANKNIFTY,NO TRADE,0.236,0.662,2,edge +0.24 below threshold 0.3
+2026-06-16T08:49:42,SENSEX,NO TRADE,0.4,0.574,3,risk budget Rs500 too small for 1 lot (needs ~Rs2015) — stay flat
+2026-06-16T08:49:46,RELIANCE,NO TRADE,0.191,0.567,2,edge +0.19 below threshold 0.3
+2026-06-16T08:49:49,HDFCBANK,NO TRADE,0.16,0.583,3,edge +0.16 below threshold 0.3
+2026-06-16T08:49:52,ICICIBANK,NO TRADE,0.375,0.663,2,only 2 agents agree (need 3)
+2026-06-16T08:49:56,SBIN,NO TRADE,-0.152,0.585,2,edge -0.15 below threshold 0.3
+2026-06-16T08:49:59,INFY,NO TRADE,0.539,0.642,3,risk budget Rs500 too small for 1 lot (needs ~Rs3396) — stay flat
+2026-06-16T08:50:03,TCS,NO TRADE,0.21,0.609,2,edge +0.21 below threshold 0.3
+2026-06-16T08:50:06,AXISBANK,NO TRADE,-0.291,0.545,4,edge -0.29 below threshold 0.3
+2026-06-16T08:50:10,KOTAKBANK,NO TRADE,0.247,0.662,2,edge +0.25 below threshold 0.3
+2026-06-16T08:50:13,BAJFINANCE,NO TRADE,0.452,0.614,3,risk budget Rs500 too small for 1 lot (needs ~Rs3705) — stay flat
+2026-06-16T08:50:17,LT,NO TRADE,0.202,0.559,2,edge +0.20 below threshold 0.3
+2026-06-16T08:50:21,ITC,NO TRADE,0.347,0.667,3,risk budget Rs500 too small for 1 lot (needs ~Rs1520) — stay flat
+2026-06-16T08:50:24,HINDUNILVR,NO TRADE,0.249,0.687,2,edge +0.25 below threshold 0.3
+2026-06-16T08:50:27,MARUTI,NO TRADE,-0.123,0.599,2,edge -0.12 below threshold 0.3
+2026-06-16T08:50:31,M&M,NO TRADE,0.219,0.546,2,edge +0.22 below threshold 0.3
+2026-06-16T08:50:34,TATASTEEL,NO TRADE,-0.123,0.591,2,edge -0.12 below threshold 0.3
+2026-06-16T08:50:37,ADANIENT,NO TRADE,0.298,0.627,2,edge +0.30 below threshold 0.3
+2026-06-16T08:50:41,BHARTIARTL,NO TRADE,-0.069,0.525,2,edge -0.07 below threshold 0.3
