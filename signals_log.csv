@@ -425,3 +425,23 @@ time,symbol,action,score,confidence,agreeing,reason
 2026-06-17T12:39:31,TATASTEEL,NO TRADE,0.152,0.608,2,edge +0.15 below threshold 0.3
 2026-06-17T12:39:34,ADANIENT,NO TRADE,0.357,0.619,2,only 2 agents agree (need 3)
 2026-06-17T12:39:38,BHARTIARTL,NO TRADE,0.163,0.544,3,edge +0.16 below threshold 0.3
+2026-06-18T08:11:32,NIFTY,NO TRADE,-0.046,0.524,2,edge -0.05 below threshold 0.3
+2026-06-18T08:11:36,BANKNIFTY,NO TRADE,0.266,0.611,2,edge +0.27 below threshold 0.3
+2026-06-18T08:11:39,SENSEX,NO TRADE,-0.068,0.524,2,edge -0.07 below threshold 0.3
+2026-06-18T08:11:42,RELIANCE,NO TRADE,-0.313,0.609,2,only 2 agents agree (need 3)
+2026-06-18T08:11:46,HDFCBANK,NO TRADE,-0.104,0.663,2,edge -0.10 below threshold 0.3
+2026-06-18T08:11:49,ICICIBANK,NO TRADE,0.237,0.543,3,edge +0.24 below threshold 0.3
+2026-06-18T08:11:52,SBIN,NO TRADE,0.202,0.592,3,edge +0.20 below threshold 0.3
+2026-06-18T08:11:56,INFY,NO TRADE,-0.208,0.542,2,edge -0.21 below threshold 0.3
+2026-06-18T08:11:59,TCS,NO TRADE,-0.107,0.661,3,edge -0.11 below threshold 0.3
+2026-06-18T08:12:02,AXISBANK,NO TRADE,-0.069,0.545,4,edge -0.07 below threshold 0.3
+2026-06-18T08:12:06,KOTAKBANK,NO TRADE,-0.13,0.631,2,edge -0.13 below threshold 0.3
+2026-06-18T08:12:09,BAJFINANCE,NO TRADE,0.189,0.563,2,edge +0.19 below threshold 0.3
+2026-06-18T08:12:13,LT,NO TRADE,-0.391,0.658,3,risk budget Rs500 too small for 1 lot (needs ~Rs2447) — stay flat
+2026-06-18T08:12:16,ITC,NO TRADE,-0.155,0.669,2,edge -0.16 below threshold 0.3
+2026-06-18T08:12:19,HINDUNILVR,NO TRADE,-0.137,0.527,3,edge -0.14 below threshold 0.3
+2026-06-18T08:12:23,MARUTI,NO TRADE,-0.168,0.605,2,edge -0.17 below threshold 0.3
+2026-06-18T08:12:26,M&M,NO TRADE,0.134,0.527,2,edge +0.13 below threshold 0.3
+2026-06-18T08:12:29,TATASTEEL,NO TRADE,0.334,0.615,3,risk budget Rs500 too small for 1 lot (needs ~Rs2942) — stay flat
+2026-06-18T08:12:33,ADANIENT,NO TRADE,-0.056,0.509,2,edge -0.06 below threshold 0.3
+2026-06-18T08:12:36,BHARTIARTL,NO TRADE,-0.637,0.665,4,risk budget Rs500 too small for 1 lot (needs ~Rs2508) — stay flat
