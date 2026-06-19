@@ -482,3 +482,22 @@ time,symbol,action,score,confidence,agreeing,reason
 2026-06-19T08:36:25,HCLTECH,NO TRADE,-0.023,0.58,2,edge -0.02 below threshold 0.3
 2026-06-19T08:36:28,SUNPHARMA,NO TRADE,-0.114,0.686,2,edge -0.11 below threshold 0.3
 2026-06-19T08:36:32,TITAN,NO TRADE,0.411,0.571,3,risk budget Rs500 too small for 1 lot (needs ~Rs3255) — stay flat
+2026-06-19T12:35:19,NIFTY,NO TRADE,-0.011,0.69,3,edge -0.01 below threshold 0.3
+2026-06-19T12:35:22,BANKNIFTY,NO TRADE,-0.147,0.6,2,edge -0.15 below threshold 0.3
+2026-06-19T12:35:26,SENSEX,NO TRADE,-0.051,0.66,3,edge -0.05 below threshold 0.3
+2026-06-19T12:35:29,RELIANCE,NO TRADE,-0.417,0.587,3,risk budget Rs500 too small for 1 lot (needs ~Rs2980) — stay flat
+2026-06-19T12:35:32,HDFCBANK,NO TRADE,0.101,0.638,2,edge +0.10 below threshold 0.3
+2026-06-19T12:35:36,ICICIBANK,NO TRADE,0.254,0.547,2,edge +0.25 below threshold 0.3
+2026-06-19T12:35:40,SBIN,NO TRADE,-0.065,0.636,2,edge -0.07 below threshold 0.3
+2026-06-19T12:35:43,INFY,NO TRADE,-0.422,0.598,4,risk budget Rs500 too small for 1 lot (needs ~Rs2460) — stay flat
+2026-06-19T12:35:46,TCS,NO TRADE,-0.461,0.591,4,risk budget Rs500 too small for 1 lot (needs ~Rs1691) — stay flat
+2026-06-19T12:35:49,AXISBANK,NO TRADE,-0.048,0.621,4,edge -0.05 below threshold 0.3
+2026-06-19T12:35:57,HINDUNILVR,NO TRADE,-0.328,0.605,4,risk budget Rs500 too small for 1 lot (needs ~Rs3390) — stay flat
+2026-06-19T12:36:01,MARUTI,NO TRADE,-0.407,0.636,3,risk budget Rs500 too small for 1 lot (needs ~Rs2295) — stay flat
+2026-06-19T12:36:04,M&M,NO TRADE,-0.502,0.638,3,risk budget Rs500 too small for 1 lot (needs ~Rs2982) — stay flat
+2026-06-19T12:36:07,TATASTEEL,NO TRADE,-0.027,0.68,3,edge -0.03 below threshold 0.3
+2026-06-19T12:36:11,ADANIENT,NO TRADE,-0.057,0.595,2,edge -0.06 below threshold 0.3
+2026-06-19T12:36:14,BHARTIARTL,NO TRADE,0.218,0.597,3,edge +0.22 below threshold 0.3
+2026-06-19T12:36:17,HCLTECH,NO TRADE,-0.167,0.535,3,edge -0.17 below threshold 0.3
+2026-06-19T12:36:21,SUNPHARMA,NO TRADE,0.319,0.667,3,risk budget Rs500 too small for 1 lot (needs ~Rs1858) — stay flat
+2026-06-19T12:36:24,TITAN,NO TRADE,0.505,0.633,3,risk budget Rs500 too small for 1 lot (needs ~Rs3269) — stay flat
