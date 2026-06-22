@@ -501,3 +501,22 @@ time,symbol,action,score,confidence,agreeing,reason
 2026-06-19T12:36:17,HCLTECH,NO TRADE,-0.167,0.535,3,edge -0.17 below threshold 0.3
 2026-06-19T12:36:21,SUNPHARMA,NO TRADE,0.319,0.667,3,risk budget Rs500 too small for 1 lot (needs ~Rs1858) — stay flat
 2026-06-19T12:36:24,TITAN,NO TRADE,0.505,0.633,3,risk budget Rs500 too small for 1 lot (needs ~Rs3269) — stay flat
+2026-06-22T09:14:29,NIFTY,NO TRADE,0.545,0.681,3,risk budget Rs500 too small for 1 lot (needs ~Rs1431) — stay flat
+2026-06-22T09:14:33,BANKNIFTY,NO TRADE,0.36,0.618,3,risk budget Rs500 too small for 1 lot (needs ~Rs5267) — stay flat
+2026-06-22T09:14:36,SENSEX,NO TRADE,0.534,0.657,3,risk budget Rs500 too small for 1 lot (needs ~Rs2515) — stay flat
+2026-06-22T09:14:40,RELIANCE,NO TRADE,0.126,0.551,2,edge +0.13 below threshold 0.3
+2026-06-22T09:14:43,HDFCBANK,NO TRADE,0.41,0.633,3,risk budget Rs500 too small for 1 lot (needs ~Rs1716) — stay flat
+2026-06-22T09:14:46,ICICIBANK,NO TRADE,0.259,0.571,2,edge +0.26 below threshold 0.3
+2026-06-22T09:14:49,SBIN,NO TRADE,0.053,0.553,2,edge +0.05 below threshold 0.3
+2026-06-22T09:14:53,INFY,NO TRADE,0.271,0.636,2,edge +0.27 below threshold 0.3
+2026-06-22T09:14:56,TCS,NO TRADE,-0.422,0.579,3,risk budget Rs500 too small for 1 lot (needs ~Rs1969) — stay flat
+2026-06-22T09:14:59,AXISBANK,NO TRADE,0.169,0.585,2,edge +0.17 below threshold 0.3
+2026-06-22T09:15:08,HINDUNILVR,NO TRADE,-0.293,0.651,2,edge -0.29 below threshold 0.3
+2026-06-22T09:15:12,MARUTI,NO TRADE,-0.334,0.652,3,risk budget Rs500 too small for 1 lot (needs ~Rs2490) — stay flat
+2026-06-22T09:15:15,M&M,NO TRADE,-0.314,0.643,3,risk budget Rs500 too small for 1 lot (needs ~Rs2646) — stay flat
+2026-06-22T09:15:18,TATASTEEL,NO TRADE,-0.507,0.697,3,risk budget Rs500 too small for 1 lot (needs ~Rs2860) — stay flat
+2026-06-22T09:15:21,ADANIENT,NO TRADE,0.384,0.64,3,risk budget Rs500 too small for 1 lot (needs ~Rs6263) — stay flat
+2026-06-22T09:15:25,BHARTIARTL,NO TRADE,0.133,0.522,3,edge +0.13 below threshold 0.3
+2026-06-22T09:15:28,HCLTECH,NO TRADE,-0.456,0.588,4,risk budget Rs500 too small for 1 lot (needs ~Rs2299) — stay flat
+2026-06-22T09:15:32,SUNPHARMA,NO TRADE,0.141,0.545,2,edge +0.14 below threshold 0.3
+2026-06-22T09:15:35,TITAN,NO TRADE,-0.008,0.536,2,edge -0.01 below threshold 0.3
