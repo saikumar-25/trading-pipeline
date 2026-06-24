@@ -600,3 +600,23 @@ time,symbol,action,score,confidence,agreeing,reason
 2026-06-23T13:31:55,TATASTEEL,NO TRADE,-0.266,0.597,2,edge -0.27 below threshold 0.3
 2026-06-23T13:31:58,ADANIENT,NO TRADE,-0.43,0.651,3,risk budget Rs500 too small for 1 lot (needs ~Rs5423) — stay flat
 2026-06-23T13:32:01,BHARTIARTL,NO TRADE,-0.472,0.66,3,risk budget Rs500 too small for 1 lot (needs ~Rs2380) — stay flat
+2026-06-24T06:52:28,NIFTY,NO TRADE,0.262,0.655,2,edge +0.26 below threshold 0.3
+2026-06-24T06:52:31,BANKNIFTY,NO TRADE,0.095,0.584,2,edge +0.10 below threshold 0.3
+2026-06-24T06:52:34,SENSEX,NO TRADE,0.252,0.615,2,edge +0.25 below threshold 0.3
+2026-06-24T06:52:38,RELIANCE,NO TRADE,0.077,0.589,1,edge +0.08 below threshold 0.3
+2026-06-24T06:52:41,HDFCBANK,NO TRADE,0.252,0.595,3,edge +0.25 below threshold 0.3
+2026-06-24T06:52:45,ICICIBANK,NO TRADE,0.33,0.583,3,risk budget Rs500 too small for 1 lot (needs ~Rs2261) — stay flat
+2026-06-24T06:52:48,SBIN,NO TRADE,0.183,0.558,3,edge +0.18 below threshold 0.3
+2026-06-24T06:52:51,INFY,NO TRADE,-0.04,0.594,3,edge -0.04 below threshold 0.3
+2026-06-24T06:52:55,TCS,NO TRADE,-0.024,0.567,3,edge -0.02 below threshold 0.3
+2026-06-24T06:52:58,AXISBANK,NO TRADE,0.049,0.552,2,edge +0.05 below threshold 0.3
+2026-06-24T06:53:07,ITC,NO TRADE,-0.524,0.74,2,only 2 agents agree (need 3)
+2026-06-24T06:53:10,HINDUNILVR,NO TRADE,-0.574,0.678,3,risk budget Rs500 too small for 1 lot (needs ~Rs2070) — stay flat
+2026-06-24T06:53:13,MARUTI,NO TRADE,-0.149,0.594,2,edge -0.15 below threshold 0.3
+2026-06-24T06:53:17,M&M,NO TRADE,0.108,0.538,2,edge +0.11 below threshold 0.3
+2026-06-24T06:53:20,TATASTEEL,NO TRADE,-0.217,0.619,2,edge -0.22 below threshold 0.3
+2026-06-24T06:53:23,ADANIENT,NO TRADE,0.169,0.536,3,edge +0.17 below threshold 0.3
+2026-06-24T06:53:27,BHARTIARTL,NO TRADE,-0.26,0.598,3,edge -0.26 below threshold 0.3
+2026-06-24T06:53:30,HCLTECH,NO TRADE,-0.234,0.565,3,edge -0.23 below threshold 0.3
+2026-06-24T06:53:34,SUNPHARMA,NO TRADE,0.085,0.553,2,edge +0.09 below threshold 0.3
+2026-06-24T06:53:37,TITAN,NO TRADE,0.081,0.647,3,edge +0.08 below threshold 0.3
