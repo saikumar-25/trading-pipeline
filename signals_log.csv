@@ -643,3 +643,23 @@ time,symbol,action,score,confidence,agreeing,reason
 2026-06-24T10:23:02,HCLTECH,NO TRADE,-0.369,0.545,4,confidence 0.54 below 0.55
 2026-06-24T10:23:10,SUNPHARMA,NO TRADE,-0.308,0.601,3,risk budget Rs500 too small for 1 lot (needs ~Rs1907) — stay flat
 2026-06-24T10:23:19,TITAN,NO TRADE,-0.398,0.62,3,risk budget Rs500 too small for 1 lot (needs ~Rs1573) — stay flat
+2026-06-24T12:31:41,NIFTY,NO TRADE,0.011,0.717,2,edge +0.01 below threshold 0.3
+2026-06-24T12:31:44,BANKNIFTY,NO TRADE,0.356,0.62,2,only 2 agents agree (need 3)
+2026-06-24T12:31:48,SENSEX,NO TRADE,-0.063,0.689,2,edge -0.06 below threshold 0.3
+2026-06-24T12:31:51,RELIANCE,NO TRADE,-0.095,0.665,2,edge -0.10 below threshold 0.3
+2026-06-24T12:31:55,HDFCBANK,NO TRADE,0.469,0.665,3,risk budget Rs500 too small for 1 lot (needs ~Rs1306) — stay flat
+2026-06-24T12:31:59,ICICIBANK,NO TRADE,0.357,0.587,3,risk budget Rs500 too small for 1 lot (needs ~Rs2744) — stay flat
+2026-06-24T12:32:02,SBIN,NO TRADE,-0.245,0.681,3,edge -0.25 below threshold 0.3
+2026-06-24T12:32:05,INFY,NO TRADE,0.053,0.594,2,edge +0.05 below threshold 0.3
+2026-06-24T12:32:09,TCS,NO TRADE,0.114,0.641,1,edge +0.11 below threshold 0.3
+2026-06-24T12:32:12,AXISBANK,NO TRADE,0.371,0.65,3,risk budget Rs500 too small for 1 lot (needs ~Rs2438) — stay flat
+2026-06-24T12:32:16,KOTAKBANK,NO TRADE,-0.225,0.68,3,edge -0.23 below threshold 0.3
+2026-06-24T12:32:20,BAJFINANCE,NO TRADE,0.236,0.587,3,edge +0.24 below threshold 0.3
+2026-06-24T12:32:23,LT,NO TRADE,-0.062,0.544,2,edge -0.06 below threshold 0.3
+2026-06-24T12:32:26,ITC,NO TRADE,-0.287,0.643,2,edge -0.29 below threshold 0.3
+2026-06-24T12:32:30,HINDUNILVR,NO TRADE,-0.251,0.599,4,edge -0.25 below threshold 0.3
+2026-06-24T12:32:33,MARUTI,NO TRADE,-0.342,0.591,3,risk budget Rs500 too small for 1 lot (needs ~Rs1702) — stay flat
+2026-06-24T12:32:36,M&M,NO TRADE,0.069,0.527,2,edge +0.07 below threshold 0.3
+2026-06-24T12:32:40,TATASTEEL,NO TRADE,-0.303,0.588,3,risk budget Rs500 too small for 1 lot (needs ~Rs1705) — stay flat
+2026-06-24T12:32:43,ADANIENT,NO TRADE,0.103,0.524,2,edge +0.10 below threshold 0.3
+2026-06-24T12:32:46,BHARTIARTL,NO TRADE,-0.32,0.527,3,confidence 0.53 below 0.55
