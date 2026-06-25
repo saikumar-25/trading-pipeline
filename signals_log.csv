@@ -663,3 +663,23 @@ time,symbol,action,score,confidence,agreeing,reason
 2026-06-24T12:32:40,TATASTEEL,NO TRADE,-0.303,0.588,3,risk budget Rs500 too small for 1 lot (needs ~Rs1705) — stay flat
 2026-06-24T12:32:43,ADANIENT,NO TRADE,0.103,0.524,2,edge +0.10 below threshold 0.3
 2026-06-24T12:32:46,BHARTIARTL,NO TRADE,-0.32,0.527,3,confidence 0.53 below 0.55
+2026-06-25T06:51:47,NIFTY,NO TRADE,0.304,0.555,2,only 2 agents agree (need 3)
+2026-06-25T06:51:51,BANKNIFTY,NO TRADE,0.334,0.542,3,confidence 0.54 below 0.55
+2026-06-25T06:51:54,SENSEX,NO TRADE,0.463,0.592,4,risk budget Rs500 too small for 1 lot (needs ~Rs936) — stay flat
+2026-06-25T06:51:57,RELIANCE,NO TRADE,-0.079,0.653,2,edge -0.08 below threshold 0.3
+2026-06-25T06:52:01,HDFCBANK,NO TRADE,0.274,0.582,3,edge +0.27 below threshold 0.3
+2026-06-25T06:52:04,ICICIBANK,NO TRADE,0.42,0.573,3,risk budget Rs500 too small for 1 lot (needs ~Rs2233) — stay flat
+2026-06-25T06:52:08,SBIN,NO TRADE,0.471,0.64,3,risk budget Rs500 too small for 1 lot (needs ~Rs2002) — stay flat
+2026-06-25T06:52:11,INFY,NO TRADE,-0.494,0.679,3,risk budget Rs500 too small for 1 lot (needs ~Rs1248) — stay flat
+2026-06-25T06:52:14,TCS,NO TRADE,-0.237,0.644,3,edge -0.24 below threshold 0.3
+2026-06-25T06:52:17,AXISBANK,NO TRADE,0.231,0.551,3,edge +0.23 below threshold 0.3
+2026-06-25T06:52:21,KOTAKBANK,NO TRADE,0.314,0.667,2,only 2 agents agree (need 3)
+2026-06-25T06:52:25,BAJFINANCE,NO TRADE,0.201,0.607,2,edge +0.20 below threshold 0.3
+2026-06-25T06:52:28,LT,NO TRADE,0.174,0.555,2,edge +0.17 below threshold 0.3
+2026-06-25T06:52:32,ITC,NO TRADE,0.06,0.595,1,edge +0.06 below threshold 0.3
+2026-06-25T06:52:35,HINDUNILVR,NO TRADE,-0.104,0.525,4,edge -0.10 below threshold 0.3
+2026-06-25T06:52:38,MARUTI,NO TRADE,0.052,0.567,3,edge +0.05 below threshold 0.3
+2026-06-25T06:52:42,M&M,NO TRADE,0.076,0.59,2,edge +0.08 below threshold 0.3
+2026-06-25T06:52:45,TATASTEEL,NO TRADE,-0.137,0.574,2,edge -0.14 below threshold 0.3
+2026-06-25T06:52:48,ADANIENT,NO TRADE,-0.089,0.484,2,edge -0.09 below threshold 0.3
+2026-06-25T06:52:52,BHARTIARTL,NO TRADE,-0.326,0.592,3,risk budget Rs500 too small for 1 lot (needs ~Rs940) — stay flat
