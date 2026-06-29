@@ -1,3 +1,4 @@
 id,open_time,symbol,action,strike,type,expiry,security_id,entry,stop,target,lots,qty,status,exit_time,exit_price,pnl_rs,reason
 NIFTY-2026-06-23T10:37:43,2026-06-23T13:30:54,NIFTY,BUY PE,23800.0,PE,2026-06-23,56355,0.05,0.03,0.08,333,24975,open,,,,"4 agents agree, edge -0.38, conf 0.60"
 NIFTY-2026-06-23T13:30:54,2026-06-23T13:30:54,NIFTY,BUY PE,23800.0,PE,2026-06-23,56355,0.05,0.03,0.08,333,24975,pending,,,,"4 agents agree, edge -0.36, conf 0.60"
+MARUTI-2026-06-29T12:45:05,2026-06-29T12:45:05,MARUTI,BUY PE,13400.0,PE,2026-06-30,144606,27.0,18.9,39.15,1,50,pending,,,,"3 agents agree, edge -0.38, conf 0.66"
